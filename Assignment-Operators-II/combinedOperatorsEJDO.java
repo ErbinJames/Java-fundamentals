@@ -9,6 +9,7 @@ public class combinedOperatorsEJDO {
             a += b; // add a and b then store the result in a.
             b *= 2; // multiply a by 2 then store the result in b.
 
+            //print the final value 
             System.out.println("Final value of a: " + a);
             System.out.println("Final value of b: " + b);
         } 
