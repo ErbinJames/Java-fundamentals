@@ -1,6 +1,6 @@
 //Task 3: Relational Operators
 public class relationalOperatorsEJDO {
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         int x = 10, y = 25; // declaring x and y variable and assign values
 
         // perform relational comparison and then print results (true or false)
