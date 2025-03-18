@@ -1,3 +1,4 @@
+//Task 1: Odd or Even Checker
 import java.util.Scanner;
 
 public class OddEvenEJDO {
