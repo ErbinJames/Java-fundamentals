@@ -71,8 +71,8 @@ public class StudentGradesAnalyzer {
     }
 
     // Method to calculate the average grade
-    public static double calculateAverage(int total, int count) {
-        return (double) total / count;
+    public static double calculateAverage(int total, int numberOfStudents) {
+        return (double) total / numberOfStudents;
     }
 
     // Method to find the highest grade
