@@ -27,7 +27,7 @@ public class ManualNumberConverter {
 
     //Method to convert decimal to binary
     public static String toBinary(int decimalNumber) {
-        StringBuilder binaryResult = new StringBuilder(); // StringBuilder to reduce memory usage and improves performance
+        String binaryResult = "";
 
         if (decimalNumber == 0) {
             return "0";
@@ -35,16 +35,16 @@ public class ManualNumberConverter {
 
         while (decimalNumber > 0) {
             int remainder = decimalNumber % 2;
-            binaryResult.insert(0,remainder); 
+            binaryResult = remainder + binaryResult; 
             decimalNumber /= 2; //base 2
         }
 
-        return binaryResult.toString();
+        return binaryResult;
     }
 
     //Method to convert decimal to Octal
     public static String toOctal(int decimalNumber) {
-        StringBuilder octalResult = new StringBuilder();
+        String octalResult = "";
 
         if (decimalNumber == 0) {
             return "0";
@@ -52,16 +52,16 @@ public class ManualNumberConverter {
 
         while (decimalNumber > 0) {
             int remainder = decimalNumber % 8;
-            octalResult.insert(0, remainder); // Prepend remainder
+            octalResult = remainder + octalResult; 
             decimalNumber /= 8; //base 8
         }
 
-        return octalResult.toString();
+        return octalResult;
     }
 
     //Method to convert decimal to Hexadecimal
     public static String toHexadecimal(int decimalNumber) {
-        StringBuilder hexResult = new StringBuilder();
+        String hexResult = "";
         char[] hexDigits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
         if (decimalNumber == 0) {
@@ -70,10 +70,10 @@ public class ManualNumberConverter {
 
         while (decimalNumber > 0) {
             int remainder = decimalNumber % 16;
-            hexResult.insert(0,hexDigits[remainder]); //Map remainder to hex digit
+            hexResult = hexDigits[remainder] + hexResult; // string concatenation 
             decimalNumber /= 16; //base 16
         }
 
-        return hexResult.toString();
+        return hexResult;
     }
 }
